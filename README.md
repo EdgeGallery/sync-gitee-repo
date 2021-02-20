@@ -1,4 +1,4 @@
-# sync-test
+# Release v1.0 sync-test
 
 #### 介绍
 use for testing how to sync up between gitee and github
