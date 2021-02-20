@@ -1,4 +1,4 @@
-# sync-test
+# master sync-test
 
 #### 介绍
 use for testing how to sync up between gitee and github
