@@ -1,0 +1,27 @@
+name: EdgeGallery gitee repos mirror periodic job
+on:
+  pull_request:
+    # Runs at every pull requests submitted in master branch 
+    branches:
+    - master
+    - Release-v1.0
+    paths:
+    - '.github/workflows/**'
+  schedule:
+    # Runs at 01:00 UTC (9:00 AM Beijing) every day
+    - cron:  '0 1 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Mirror the gitee/edgegallery org repos to github/EdgeGallery.
+      uses: Yikun/hub-mirror-action@v0.13
+      with:
+        src: gitee/edgegallery
+        dst: github/EdgeGallery
+        dst_key: ${{ secrets.SYNC_EG_PRIVATE_KEY }}
+        dst_token:  ${{ secrets.SYNC_EG_TOKEN }}
+        static_list: "sync-test"
+        account_type: org
+        clone_style: ssh
+        force_update: true
