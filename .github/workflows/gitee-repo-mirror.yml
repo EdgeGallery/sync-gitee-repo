@@ -14,7 +14,7 @@ jobs:
         dst: github/EdgeGallery
         dst_key: ${{ secrets.SYNC_EG_PRIVATE_KEY }}
         dst_token:  ${{ secrets.SYNC_EG_TOKEN }}
-        static_list: 'installer'
+        #static_list: 'installer'
         account_type: org
         clone_style: ssh
         force_update: true
