@@ -1,5 +1,7 @@
 # master sync-test
 
+git action
+
 #### 介绍
 use for testing how to sync up between gitee and github
 
